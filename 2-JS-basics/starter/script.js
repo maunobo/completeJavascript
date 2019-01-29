@@ -526,3 +526,100 @@ console.log('Goodbye World! 😀');
 // for (let i = john.length - 1; i >= 0; i--) {
 //     console.log(john[i]);
 // }
+
+/**
+ * Coding Challenge 5
+ */
+// MDN - round the number to two decimal places
+function roundToTwo(num) {
+    return +(Math.round(num + "e+2") + "e-2");
+}
+
+johnObj = {
+    firstName: 'John',
+    bills: [124, 48, 268, 180, 42],
+    tips: [],
+    finalPaid: [],
+    tipCalc: function () {
+        for (let i = 0; i < this.bills.length; i++) {
+            if (this.bills[i] < 50) {
+                this.tips[i] = this.bills[i] * .2;
+                this.tips[i] = roundToTwo(this.tips[i]);
+                this.finalPaid[i] = this.tips[i] + this.bills[i];
+            } else if (this.bills[i] >= 50 && this.bills[i] <= 200) {
+                this.tips[i] = this.bills[i] * .15;
+                this.tips[i] = roundToTwo(this.tips[i]);
+                this.finalPaid[i] = this.tips[i] + this.bills[i];
+            } else if (this.bills[i] >= 200) {
+                this.tips[i] = this.bills[i] * .1;
+                this.tips[i] = roundToTwo(this.tips[i]);
+                this.finalPaid[i] = this.tips[i] + this.bills[i];
+            } else {
+                console.log('Problem!');
+            }
+        }
+    },
+}
+
+johnObj.tipCalc();
+
+console.log(johnObj.firstName + '\'s bills array: ', johnObj.bills);
+console.log(johnObj.firstName + '\'s tips array: ', johnObj.tips);
+console.log(johnObj.firstName + '\'s final paid array: ', johnObj.finalPaid);
+
+markObj = {
+    firstName: 'Mark',
+    bills: [77, 375, 110, 45],
+    tips: [],
+    finalPaid: [],
+    tipCalc: function () {
+        for (let i = 0; i < this.bills.length; i++) {
+            if (this.bills[i] < 100) {
+                this.tips[i] = this.bills[i] * .2;
+                this.tips[i] = roundToTwo(this.tips[i]);
+                this.finalPaid[i] = this.tips[i] + this.bills[i];
+            } else if (this.bills[i] >= 100 && this.bills[i] <= 300) {
+                this.tips[i] = this.bills[i] * .1;
+                this.tips[i] = roundToTwo(this.tips[i]);
+                this.finalPaid[i] = this.tips[i] + this.bills[i];
+            } else if (this.bills[i] >= 300) {
+                this.tips[i] = this.bills[i] * .25;
+                this.tips[i] = roundToTwo(this.tips[i]);
+                this.finalPaid[i] = this.tips[i] + this.bills[i];
+            } else {
+                console.log('Problem!');
+            }
+        }
+    },
+}
+
+markObj.tipCalc();
+
+console.log(markObj.firstName + '\'s bills array: ', markObj.bills);
+console.log(markObj.firstName + '\'s tips array: ', markObj.tips);
+console.log(markObj.firstName + '\'s final paid array: ', markObj.finalPaid);
+
+let avgTip = function (tips) {
+    count = 0;
+    sum = 0;
+    for(let i = 0; i < tips.length; i++) {
+        sum += tips[i];
+        count += 1;
+    }
+    avg = sum / count;
+    return roundToTwo(avg);
+}
+
+// Storing the tips to some other variables for simpler code re-use
+let johnTips = avgTip(johnObj.tips);
+let markTips = avgTip(markObj.tips);
+
+console.log('---------------------------------------------------');
+if (johnTips > markTips) {
+    console.log(johnObj.firstName + '\'s family paid: '  + johnTips + ' in tips, average higher than ' + markObj.firstName + '\'s family.');   
+} else if (johnTips < markTips) {
+    console.log(markObj.firstName + '\'s family paid: '  + markTips + ' in tips, average higher than ' + johnObj.firstName + '\'s family.');   
+} else {
+    console.log('Both ' + johnObj.firstName + '\'s and ' + markObj.firstName + '\'s have have payed the same tips!');
+}
+console.log('---------------------------------------------------');
