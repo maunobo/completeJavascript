@@ -234,32 +234,120 @@ console.log('Goodbye World! 😀');
 /**
  * Coding Challenge 2
  */
-var johnTeam = [89, 120, 103];
-var mikeTeam = [116, 94, 123];
-var maryTeam = [97, 134, 105];
+// var johnTeam = [89, 120, 103];
+// var mikeTeam = [116, 94, 123];
+// var maryTeam = [97, 134, 105];
 
-const average = arr => arr.reduce((p, c) => p + c, 0) / arr.length;
+// const average = arr => arr.reduce((p, c) => p + c, 0) / arr.length;
 
-const johnResult = average(johnTeam);
-const mikeResult = average(mikeTeam);
-const maryResult = average(maryTeam);
+// const johnResult = average(johnTeam);
+// const mikeResult = average(mikeTeam);
+// const maryResult = average(maryTeam);
 
-var winer = 0;
+// var winer = 0;
 
-switch (true) {
-    case (johnResult > mikeResult && johnResult > maryResult):
-        console.log('John is the winner!');
-        break;
-    case (mikeResult > johnResult && mikeResult > maryResult):
-        console.log('Mike is the winner!');
-        break;
-    case (maryResult > johnResult && maryResult > mikeResult):
-        console.log('Mary is the winner!');
-        break;
-    default:
-        console.log('Its a tie!! ' + johnResult + ' - ' + mikeResult + ' - ' + maryResult);
-}
+// switch (true) {
+//     case (johnResult > mikeResult && johnResult > maryResult):
+//         console.log('John is the winner!');
+//         break;
+//     case (mikeResult > johnResult && mikeResult > maryResult):
+//         console.log('Mike is the winner!');
+//         break;
+//     case (maryResult > johnResult && maryResult > mikeResult):
+//         console.log('Mary is the winner!');
+//         break;
+//     default:
+//         console.log('Its a tie!! ' + johnResult + ' - ' + mikeResult + ' - ' + maryResult);
+// }
 
-console.log('John\'s team : ' + johnResult);
-console.log('Mike\'s team : ' + mikeResult);
-console.log('Mary\'s team : ' + maryResult);
+// console.log('John\'s team : ' + johnResult);
+// console.log('Mike\'s team : ' + mikeResult);
+// console.log('Mary\'s team : ' + maryResult);
+
+/**
+ * Functions
+ */
+// function calculateAge(birthYear) {
+//     return (new Date()).getFullYear() - birthYear;
+// }
+
+// // let userIn = prompt('Please enter the year you were born!')
+// // console.log(calculateAge(userIn));
+// let ageJohn = calculateAge(1988);
+// let ageMike = calculateAge(1982);
+// let ageMary = calculateAge(1994);
+
+// console.log(ageJohn, ageMike, ageMary);
+
+// function yearsUntilRetirement(year, firstName) {
+//     var age = calculateAge(year);
+//     var retirement = 65 - age;
+
+//     if (retirement > 0) {
+//         console.log(firstName + ' retires in ' + retirement + ' years.');
+//     } else {
+//         console.log(firstName + ' is already retired.');
+//     }
+// }
+
+// yearsUntilRetirement(1999, 'John');
+// yearsUntilRetirement(1969, 'Mike');
+// yearsUntilRetirement(1948, 'Mary');
+
+/**
+ * Function Statements and Expressions
+ */
+
+// // Function declaration
+// // function whaatDoYouDo(job, firstName) {}
+
+// // Function expression
+// var whatDoyouDo = function(job, firstName) {
+//     switch(job) {
+//         case 'teacher':
+//             return firstName + ' teaches kids how to code.';
+//         case 'driver':
+//             return firstName + ' drives an uber in Lisbon.';
+//         case 'designer':
+//             return firstName + ' designs beautiful websites!';
+//         default:
+//             return firstName + ' does something else.';
+//     }   
+// }
+
+// console.log(whatDoyouDo('teacher', 'John'));
+// console.log(whatDoyouDo('designer', 'Jane'));
+// console.log(whatDoyouDo('retired', 'Mike'));
+
+/**
+ * Arrays
+ */
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+// Initialize new array
+console.log(names[0]);
+console.log(names);
+console.log(names.length);
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+names.push('Peter');
+
+console.log(names);
+
+// Different data types
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+john.push('Blue');      // adds to the end
+john.unshift('Mr.');    // adds to the beginning
+
+console.log(john);
+
+john.pop();     // removes element in the end
+john.pop();     // removes element in the end
+john.shift();   // remove element in the beginning
+console.log(john);
+
+console.log(john.indexOf(1990));
