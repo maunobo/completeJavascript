@@ -448,42 +448,81 @@ console.log('Goodbye World! 😀');
  * Coding Challenge 4
  */
 
-let john = {
-    firstName: 'John',
-    lastName: 'Smith',
-    mass: 62,       // in kg
-    height: 1.71,    // in metres
-    // mass: 80,       // in kg
-    // height: 1.8,    // in metres
-    calcBMI: function(){
-        return this.bmi = this.mass / this.height**2
-    }
-}
+// let john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     mass: 62,       // in kg
+//     height: 1.71,    // in metres
+//     // mass: 80,       // in kg
+//     // height: 1.8,    // in metres
+//     calcBMI: function(){
+//         return this.bmi = this.mass / this.height**2
+//     }
+// }
 
-john.calcBMI();
+// john.calcBMI();
 
-console.log(john.firstName + ' ' + john.lastName + '\'s BMI is: '  + john.bmi + '.');
+// // console.log(john.firstName + ' ' + john.lastName + '\'s BMI is: '  + john.bmi + '.');
 
-let mark = {
-    firstName: 'Mark',
-    lastName: 'Doe',
-    // mass: 62,       // in kg
-    // height: 1.71,    // in metres
-    mass: 80,       // in kg
-    height: 1.8,    // in metres
-    calcBMI: function(){
-        this.bmi = this.mass / this.height**2
-    }
-}
+// let mark = {
+//     firstName: 'Mark',
+//     lastName: 'Doe',
+//     // mass: 62,       // in kg
+//     // height: 1.71,    // in metres
+//     mass: 80,       // in kg
+//     height: 1.8,    // in metres
+//     calcBMI: function(){
+//         this.bmi = this.mass / this.height**2
+//     }
+// }
 
-mark.calcBMI();
+// mark.calcBMI();
 
-console.log(mark.firstName + ' ' + mark.lastName + '\'s BMI is: '  + mark.bmi + '.');
+// // console.log(mark.firstName + ' ' + mark.lastName + '\'s BMI is: '  + mark.bmi + '.');
 
-if (john.bmi > mark.bmi) {
-    console.log(john.firstName + ' ' + john.lastName + '\'s BMI is: '  + john.bmi + ', higher than ' + mark.firstName + '\'s BMI.');   
-} else if (john.bmi < mark.bmi) {
-    console.log(mark.firstName + ' ' + mark.lastName + '\'s BMI is: '  + mark.bmi + ', higher than ' + john.firstName + '\'s BMI.');   
-} else {
-    console.log('Both ' + john.firstName + ' and ' + mark.firstName + ' have the same BMI!');
-}
+// if (john.bmi > mark.bmi) {
+//     console.log(john.firstName + ' ' + john.lastName + '\'s BMI is: '  + john.bmi + ', higher than ' + mark.firstName + '\'s BMI.');   
+// } else if (john.bmi < mark.bmi) {
+//     console.log(mark.firstName + ' ' + mark.lastName + '\'s BMI is: '  + mark.bmi + ', higher than ' + john.firstName + '\'s BMI.');   
+// } else {
+//     console.log('Both ' + john.firstName + ' and ' + mark.firstName + ' have the same BMI!');
+// }
+
+/**
+ * Loops and iteration
+ */
+
+// // for Loop
+// let john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+
+// for(let i = 0; i < john.length; i++) {
+//     console.log(john[i]);
+// }
+
+// // while Loop
+// let i = 0;
+// while(i < john.length) {
+//     console.log(john[i]);
+//     i++;
+// }
+
+// // continue and break statements
+// let john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+
+// // continue
+// for (let i = 0; i < john.length; i++) {
+//     if (typeof john[i] !== 'string') continue; // only type of string elementd will be printed, because of this condition
+//     console.log(john[i]);
+// }
+
+// // break
+// for (let i = 0; i < john.length; i++) {
+//     if (typeof john[i] !== 'string') break; // --> John , Smith , exits the loop
+//     console.log(john[i]);
+// }
+
+// // Looping backwards
+// console.log('Backwards iteration: end --> beginning');
+// for (let i = john.length - 1; i >= 0; i--) {
+//     console.log(john[i]);
+// }
