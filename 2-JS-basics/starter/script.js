@@ -234,4 +234,32 @@ console.log('Goodbye World! 😀');
 /**
  * Coding Challenge 2
  */
+var johnTeam = [89, 120, 103];
+var mikeTeam = [116, 94, 123];
+var maryTeam = [97, 134, 105];
 
+const average = arr => arr.reduce((p, c) => p + c, 0) / arr.length;
+
+const johnResult = average(johnTeam);
+const mikeResult = average(mikeTeam);
+const maryResult = average(maryTeam);
+
+var winer = 0;
+
+switch (true) {
+    case (johnResult > mikeResult && johnResult > maryResult):
+        console.log('John is the winner!');
+        break;
+    case (mikeResult > johnResult && mikeResult > maryResult):
+        console.log('Mike is the winner!');
+        break;
+    case (maryResult > johnResult && maryResult > mikeResult):
+        console.log('Mary is the winner!');
+        break;
+    default:
+        console.log('Its a tie!! ' + johnResult + ' - ' + mikeResult + ' - ' + maryResult);
+}
+
+console.log('John\'s team : ' + johnResult);
+console.log('Mike\'s team : ' + mikeResult);
+console.log('Mary\'s team : ' + maryResult);
