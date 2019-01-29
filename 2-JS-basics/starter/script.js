@@ -322,32 +322,75 @@ console.log('Goodbye World! 😀');
 /**
  * Arrays
  */
-var names = ['John', 'Mark', 'Jane'];
-var years = new Array(1990, 1969, 1948);
+// var names = ['John', 'Mark', 'Jane'];
+// var years = new Array(1990, 1969, 1948);
 
-// Initialize new array
-console.log(names[0]);
-console.log(names);
-console.log(names.length);
+// // Initialize new array
+// console.log(names[0]);
+// console.log(names);
+// console.log(names.length);
 
-// Mutate array data
-names[1] = 'Ben';
-names[names.length] = 'Mary';
-names.push('Peter');
+// // Mutate array data
+// names[1] = 'Ben';
+// names[names.length] = 'Mary';
+// names.push('Peter');
 
-console.log(names);
+// console.log(names);
 
-// Different data types
-var john = ['John', 'Smith', 1990, 'teacher', false];
+// // Different data types
+// var john = ['John', 'Smith', 1990, 'teacher', false];
 
-john.push('Blue');      // adds to the end
-john.unshift('Mr.');    // adds to the beginning
+// john.push('Blue');      // adds to the end
+// john.unshift('Mr.');    // adds to the beginning
 
-console.log(john);
+// console.log(john);
 
-john.pop();     // removes element in the end
-john.pop();     // removes element in the end
-john.shift();   // remove element in the beginning
-console.log(john);
+// john.pop();     // removes element in the end
+// john.pop();     // removes element in the end
+// john.shift();   // remove element in the beginning
+// console.log(john);
 
-console.log(john.indexOf(1990));
+// // console.log(john.indexOf(1990)); // 2
+
+// // console.log(john.indexOf('designer')); // -1
+
+// var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer'; // NOT
+// console.log(isDesigner); 
+
+/**
+ * Coding Challenge 3
+ */
+
+// let bills = [124, 48, 268];
+// let tips = [];
+// let finalPaid = [];
+
+// // MDN - round the number to two decimal places
+// function roundToTwo(num) {
+//     return +(Math.round(num + "e+2") + "e-2");
+// }
+
+// let tipCalc = function (bill) {
+//     if (bill < 50) {
+//         tip = bill * .2;
+//         return roundToTwo(tip);
+//     } else if (bill >= 50 && bill <= 200) {
+//         tip = bill * .15;
+//         return roundToTwo(tip);
+//     } else if (bill >= 200) {
+//         tip = bill * .1;
+//         return roundToTwo(tip);
+//     } else {
+//         console.log('Problem!');
+
+//     }
+// }
+
+// bills.forEach(function(num) {
+//     tips.push(tipCalc(num));
+//     finalPaid.push(num+tipCalc(num));
+// });
+
+// console.log('The bills array: ', bills);
+// console.log('The tips array: ', tips);
+// console.log('The final paid array: ', finalPaid);
