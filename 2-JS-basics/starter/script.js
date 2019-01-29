@@ -394,3 +394,96 @@ console.log('Goodbye World! 😀');
 // console.log('The bills array: ', bills);
 // console.log('The tips array: ', tips);
 // console.log('The final paid array: ', finalPaid);
+
+/**
+ * Objects and properties
+ */
+// Object literal
+// let john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     birthYear: 1990,
+//     family: ['Jane', 'Mark', 'Bob', 'Emily'],
+//     job: 'teacher',
+//     isMarried: false
+// };
+
+// console.log(john.firstName);
+// var x = 'birthYear';
+// console.log(john['lastName']);
+// console.log(john[x]);
+
+// john.job = 'designer';
+// john['isMarried'] = true;
+// console.log(john);
+
+// // new Object syntax
+// var jane = new Object();
+// jane.firstName = 'Jane';
+// jane.birthYear = 1969;
+// jane['lastName'] = 'Smith';
+// console.log(jane);
+
+/**
+ * Objects and methods
+ */
+
+// let john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     birthYear: 1990,
+//     family: ['Jane', 'Mark', 'Bob', 'Emily'],
+//     job: 'teacher',
+//     isMarried: false,
+//     calcAge: function(){
+//         this.age = (new Date()).getFullYear() - this.birthYear; // Current/systems year
+//     }
+// };
+
+// // console.log(john.calcAge());
+// john.calcAge();
+// console.log(john);
+
+/**
+ * Coding Challenge 4
+ */
+
+let john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    mass: 62,       // in kg
+    height: 1.71,    // in metres
+    // mass: 80,       // in kg
+    // height: 1.8,    // in metres
+    calcBMI: function(){
+        return this.bmi = this.mass / this.height**2
+    }
+}
+
+john.calcBMI();
+
+console.log(john.firstName + ' ' + john.lastName + '\'s BMI is: '  + john.bmi + '.');
+
+let mark = {
+    firstName: 'Mark',
+    lastName: 'Doe',
+    // mass: 62,       // in kg
+    // height: 1.71,    // in metres
+    mass: 80,       // in kg
+    height: 1.8,    // in metres
+    calcBMI: function(){
+        this.bmi = this.mass / this.height**2
+    }
+}
+
+mark.calcBMI();
+
+console.log(mark.firstName + ' ' + mark.lastName + '\'s BMI is: '  + mark.bmi + '.');
+
+if (john.bmi > mark.bmi) {
+    console.log(john.firstName + ' ' + john.lastName + '\'s BMI is: '  + john.bmi + ', higher than ' + mark.firstName + '\'s BMI.');   
+} else if (john.bmi < mark.bmi) {
+    console.log(mark.firstName + ' ' + mark.lastName + '\'s BMI is: '  + mark.bmi + ', higher than ' + john.firstName + '\'s BMI.');   
+} else {
+    console.log('Both ' + john.firstName + ' and ' + mark.firstName + ' have the same BMI!');
+}
